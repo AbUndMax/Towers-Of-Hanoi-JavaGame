@@ -47,7 +47,7 @@ public class HanoiEngine {
         if (toStack.peek() == null || fromStack.peek().getWidth() < toStack.peek().getWidth()) {
             toStack.push(fromStack.pop());
         }
-        // printOverview(); // for a quick debug overview :)
+        // printOverview(); // for a quick debug overview in console :)
     }
 
     private void printOverview(){
