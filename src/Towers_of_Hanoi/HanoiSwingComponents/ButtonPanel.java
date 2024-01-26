@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
+
+// simple buttonPanel with two buttons
 public class ButtonPanel extends JPanel {
 
     private JButton buttonTop = new JButton();
@@ -23,6 +25,7 @@ public class ButtonPanel extends JPanel {
         buttonBot.addActionListener(listener);
     }
 
+    // set the Button Names
     public void setButtonTopName(String name) {
         buttonTop.setText(name);
     }
@@ -31,6 +34,7 @@ public class ButtonPanel extends JPanel {
         buttonBot.setText(name);
     }
 
+    // set the commands
     public void setButtonTopCommand(String command) {
         buttonTop.setActionCommand(command);
     }

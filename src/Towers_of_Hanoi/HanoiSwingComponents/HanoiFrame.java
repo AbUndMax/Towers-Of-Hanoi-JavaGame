@@ -49,6 +49,7 @@ public class HanoiFrame extends JFrame {
         add(pane3);
     }
 
+    // set the names and commands of the buttons
     private void setupButtonPanes(){
         stack1Buttons.setButtonTopName(">");
         stack1Buttons.setButtonTopCommand("move1-2");
@@ -69,6 +70,8 @@ public class HanoiFrame extends JFrame {
         stack3Buttons.addActionListener(buttonListener);
     }
 
+    // the buttons and the tower panel are added to the same panel
+    // three of these are added to the frame next to each other
     private void setupFullPanes(){
         pane1.add(tower1, BorderLayout.CENTER);
         pane1.add(stack1Buttons, BorderLayout.SOUTH);

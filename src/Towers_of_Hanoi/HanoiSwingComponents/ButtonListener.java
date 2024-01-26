@@ -1,7 +1,6 @@
 package Towers_of_Hanoi.HanoiSwingComponents;
 
 import Towers_of_Hanoi.HanoiObjects.HanoiEngine;
-import Towers_of_Hanoi.HanoiSwingComponents.TowerPanel;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,11 +15,12 @@ public class ButtonListener implements ActionListener {
         this.towerPanels = towerPanels;
     }
 
-
+    // This method is called when an action is performed
     @Override
     public void actionPerformed(ActionEvent e) {
         String command = e.getActionCommand();
 
+        // Switch statement to determine which button was pressed and the corresponding action
         switch(command){
             case "move1-2":
                 engine.moveFromTo(1, 2);
@@ -47,6 +47,7 @@ public class ButtonListener implements ActionListener {
                 break;
         }
 
+        // Update the tower panels
         for (TowerPanel towerPanel : towerPanels) {
             towerPanel.revalidate();
             towerPanel.repaint();

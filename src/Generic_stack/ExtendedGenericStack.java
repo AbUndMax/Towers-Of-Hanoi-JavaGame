@@ -48,19 +48,23 @@ public class ExtendedGenericStack<T> extends GenericStack<T> {
         return stackSize;
     }
 
+    // returns an array with all objects in the stack
     public ArrayList<T> getObjectsInStack(){
         return objectsInStack;
     }
 
+    // returns the height of an object in the stack
     public int getHeightOfObject(T object){
         if (!objectsInStack.contains(object)) throw new NoSuchElementException("object not in this stack");
         else return objectsInStack.indexOf(object) + 1;
     }
 
+    // returns the maximum size of the stack
     public void setMaxSize(int maxSize){
         this.maxSize = maxSize;
     }
 
+    // returns true if the object is on top of the stack
     public Boolean isOnTop(T object) {
         // if object height is equal to stack size, the object is on top
         return getHeightOfObject(object) == stackSize;

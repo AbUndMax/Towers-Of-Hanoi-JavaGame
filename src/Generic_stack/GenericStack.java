@@ -28,6 +28,7 @@ public class GenericStack<T> implements Stack<T> {
         first = newNode;
     }
 
+    // remove the first Node and return the object of the first Node
     @Override
     public T pop(){
         if (first == null) throw new NoSuchElementException("Stack is empty!");
@@ -39,6 +40,7 @@ public class GenericStack<T> implements Stack<T> {
         return returnObject;
     }
 
+    // return the object of the first Node
     public T peek(){
         if (this.first != null)
             return this.first.object;

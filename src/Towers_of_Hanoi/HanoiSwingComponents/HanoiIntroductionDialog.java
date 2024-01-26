@@ -34,6 +34,7 @@ public class HanoiIntroductionDialog extends JDialog {
         add(Box.createVerticalGlue());
     }
 
+    // Introduction to the game
     private void setupIntroductionLabel(){
         introduction.setText(
                 "<html><div style='width:330px;'>" +
@@ -55,6 +56,7 @@ public class HanoiIntroductionDialog extends JDialog {
         labelPanel.add(introduction);
     }
 
+    // Button to start the game
     private void setupButton(){
         playGame.addActionListener(e -> {
             dispose();
